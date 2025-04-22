@@ -17,7 +17,7 @@ use Sylius\Component\Core\Promotion\Modifier\OrderPromotionsUsageModifierInterfa
 use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
 use Symfony\Component\DependencyInjection\Attribute\AutowireDecorated;
 
-#[AsDecorator('sylius.promotion_usage_modifier')]
+#[AsDecorator('sylius.modifier.promotion.order_usage')]
 final class OrderPromotionsUsageModifierDecorator implements OrderPromotionsUsageModifierInterface
 {
     public function __construct(

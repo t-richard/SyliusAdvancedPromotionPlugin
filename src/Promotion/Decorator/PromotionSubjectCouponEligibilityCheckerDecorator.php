@@ -23,13 +23,13 @@ use Symfony\Component\DependencyInjection\Attribute\AutowireDecorated;
 /**
  * @SuppressWarnings(PHPMD.LongClassName)
  */
-#[AsDecorator('sylius.promotion_subject_coupon_eligibility_checker')]
+#[AsDecorator('sylius.checker.promotion.subject_coupon_eligibility')]
 final class PromotionSubjectCouponEligibilityCheckerDecorator implements PromotionEligibilityCheckerInterface
 {
     public function __construct(
         #[AutowireDecorated]
         private readonly PromotionEligibilityCheckerInterface $promotionSubjectCouponEligibilityChecker,
-        #[Autowire('@sylius.promotion_coupon_eligibility_checker')]
+        #[Autowire('@sylius.checker.promotion_coupon_eligibility')]
         private readonly PromotionCouponEligibilityCheckerInterface $promotionCouponEligibilityChecker
     ) {
     }

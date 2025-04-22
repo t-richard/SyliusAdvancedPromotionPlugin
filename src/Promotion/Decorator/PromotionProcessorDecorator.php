@@ -17,7 +17,7 @@ use Sylius\Component\Promotion\Processor\PromotionProcessorInterface;
 use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
 use Symfony\Component\DependencyInjection\Attribute\AutowireDecorated;
 
-#[AsDecorator('sylius.promotion_processor')]
+#[AsDecorator('sylius.processor.promotion')]
 final class PromotionProcessorDecorator implements PromotionProcessorInterface
 {
     public function __construct(
