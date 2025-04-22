@@ -33,7 +33,7 @@ use Symfony\Component\Validator\Context\ExecutionContextInterface;
 final class CartTypeExtension extends AbstractTypeExtension
 {
     public function __construct(
-        #[Autowire('@sylius.promotion_eligibility_checker')]
+        #[Autowire('@sylius.checker.promotion_eligibility')]
         private PromotionEligibilityCheckerInterface $promotionEligibilityChecker,
         private CartContextInterface $cartContext
     ) {
